@@ -1,22 +1,16 @@
-function getComputerMove() {
-    let rock = "rock"
-    let paper = "paper"
-    let scissors = "scissors"
-
-    let computerMove = 0
-    computerMove = Math.random(computerMove)
-
-    if(computerMove <= 0.33)
-        return rock
-    else if(computerMove >= 0.66)
-        return paper
-    else return scissors
+function getRandomMove() {
+    let randomMove = Math.floor(Math.random() * 3)
+    switch (randomMove) {
+        case 0:
+            return 'ROCK'  
+            break;
+        case 1:
+            return 'PAPER'
+            break;
+        case 2:
+            return 'SCISSORS'
+        default:
+            console.log("Make a choice")
+            break;
+    }
 }
-
-function getHumanMove() {
-    let humanMove = prompt("Your Move:")
-    console.log(humanMove)
-}
-
-
-getHumanMove()

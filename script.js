@@ -1,3 +1,7 @@
+let playerScore = 0
+let computerScore = 0
+
+
 function getRandomMove() {
     let randomMove = Math.floor(Math.random() * 3)
     switch (randomMove) {
@@ -10,7 +14,24 @@ function getRandomMove() {
         case 2:
             return 'SCISSORS'
         default:
-            console.log("Make a choice")
+            
             break;
     }
+
+    console.log(randomMove)
 }
+
+function getPlayerMove() {
+    let playerChoice = prompt("Your Move:")
+    if (playerChoice === 'ROCK') {
+        playerChoice = 'ROCK'
+    }
+    else if (playerChoice === 'PAPER') {
+        playerChoice = 'PAPER'
+    } else {
+        playerChoice = 'SCISSORS'
+    }
+    console.log(playerChoice)
+}
+
+getPlayerMove()

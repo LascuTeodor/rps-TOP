@@ -17,12 +17,10 @@ function getRandomMove() {
             
             break;
     }
-
-    console.log(randomMove)
 }
 
 function getPlayerMove() {
-    let playerChoice = prompt("Your Move:")
+    let playerChoice = prompt("Your Move:").toUpperCase();
     if (playerChoice === 'ROCK') {
         playerChoice = 'ROCK'
     }
@@ -31,7 +29,5 @@ function getPlayerMove() {
     } else {
         playerChoice = 'SCISSORS'
     }
-    console.log(playerChoice)
 }
 
-getPlayerMove()

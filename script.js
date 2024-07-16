@@ -3,6 +3,7 @@ let computerScore = 0;
 let roundWinner = '';
 
 
+
 function getComputerMove() {
     let randomMove = 0;
     randomMove = Math.floor(Math.random() * 3);
@@ -59,7 +60,7 @@ function playRound(playerMove, computerMove) {
 function game() {
     
         let rounds = parseInt(prompt("How many rounds would you like to play: ")) 
-        for(let i = 0; i <= rounds; i++)
+        for(let i = 1; i <= rounds; i++)
             {
                 const playerMove = getPlayerMove();
                 const computerMove = getComputerMove();
@@ -70,10 +71,15 @@ function game() {
                 
                 console.log(roundWinner);
                 console.log(`Player Score: ${playerScore}, Computer Score: ${computerScore}`)
-            }     
-        
-        
+            }   
+            
 }
 
 game();
 
+if (playerScore > computerScore) {
+    console.log("Match Winner : The PLAYER")
+}  
+else if(playerScore < computerScore){
+    console.log("Match Winner : The COMPUTER")
+}else console.log("Match Winner : TIEEE")

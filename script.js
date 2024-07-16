@@ -55,19 +55,25 @@ function playRound(playerMove, computerMove) {
         
 }   
 
-    
+
 function game() {
-    const playerMove = getPlayerMove();
-    const computerMove = getComputerMove();
-    playRound(playerMove,computerMove);
-
-    console.log(`Player Move: ${playerMove}`);
-    console.log(`Computer Move: ${computerMove}`);
     
+        let rounds = parseInt(prompt("How many rounds would you like to play: ")) 
+        for(let i = 0; i <= rounds; i++)
+            {
+                const playerMove = getPlayerMove();
+                const computerMove = getComputerMove();
+                playRound(playerMove,computerMove);
 
+                console.log(`Player Move: ${playerMove}`);
+                console.log(`Computer Move: ${computerMove}`);    
+                
+                console.log(roundWinner);
+                console.log(`Player Score: ${playerScore}, Computer Score: ${computerScore}`)
+            }     
+        
+        
 }
 
 game();
 
-console.log(roundWinner);
-console.log(`Player Score: ${playerScore}, Computer Score: ${computerScore}`)

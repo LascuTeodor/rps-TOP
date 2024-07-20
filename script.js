@@ -57,6 +57,8 @@ function playRound(playerMove, computerMove) {
 }   
 
 
+
+
 function game() {
     
         let rounds = parseInt(prompt("How many rounds would you like to play: ")) 
@@ -73,7 +75,11 @@ function game() {
                 console.log(`Player Score: ${playerScore}, Computer Score: ${computerScore}`)
             }   
             
+            
 }
+
+
+
 
 game();
 
